@@ -1,0 +1,5441 @@
+/* =====================================================
+   🌸 PÁGINA PARA DULARY
+   Diseño: elegante + tierno + romántico
+   ===================================================== */
+
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #100a12;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+:root {
+    --rosa: #ff69b4;
+    --rosa-claro: #ffb6d9;
+    --rosa-fuerte: #ff3f9f;
+    --rosa-suave: #ffd6e9;
+
+    --fondo: #1a0713;
+    --fondo-2: #230a1a;
+    --fondo-3: #2d0d21;
+
+    --blanco: #fff7fc;
+    --gris: #d8b9ca;
+
+    --borde: rgba(255, 105, 180, 0.25);
+    --tarjeta: rgba(255, 105, 180, 0.08);
+}
+
+
+/* =====================================================
+   BARRA DE NAVEGACIÓN
+   ===================================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(16, 10, 18, 0.82);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--borde);
+}
+
+.navbar {
+    max-width: 1250px;
+    height: 75px;
+
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--rosa-claro);
+
+    text-decoration: none;
+
+    font-size: 1.35rem;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--rosa);
+    transform: scale(1.04);
+}
+
+.nav-menu {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 27px;
+}
+
+.nav-menu a {
+    position: relative;
+
+    color: #f9eaf2;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition: 0.3s ease;
+}
+
+.nav-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--rosa);
+
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--rosa-claro);
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: var(--rosa-claro);
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   INICIO
+   ===================================================== */
+
+#inicio {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 130px 25px 80px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 123, 183, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(255, 171, 213, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #100a12,
+            #211321,
+            #100a12
+        );
+}
+
+
+/* Brillo decorativo */
+
+#inicio::before {
+    content: "✦   ♡   ✧   ♡   ✦";
+
+    position: absolute;
+
+    top: 25%;
+    left: 0;
+
+    width: 100%;
+
+    color: rgba(255, 177, 215, 0.25);
+
+    font-size: 1.4rem;
+
+    letter-spacing: 50px;
+
+    animation: flotar 5s ease-in-out infinite;
+}
+
+
+/* Contenido */
+
+.inicio-contenido {
+    max-width: 850px;
+
+    position: relative;
+    z-index: 2;
+
+    animation: aparecer 1.4s ease forwards;
+}
+
+.inicio-etiqueta {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: var(--rosa-claro);
+
+    font-size: 0.72rem;
+
+    letter-spacing: 5px;
+}
+
+#inicio h1 {
+    font-size: clamp(4rem, 11vw, 9rem);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+    color: #ffe2ef;
+
+    text-shadow:
+        0 0 15px rgba(255, 159, 207, 0.4),
+        0 0 45px rgba(255, 114, 182, 0.18);
+
+    letter-spacing: 3px;
+}
+
+#inicio p {
+    max-width: 650px;
+
+    margin: auto;
+    margin-bottom: 35px;
+
+    color: var(--gris);
+
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.boton-inicio {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        var(--rosa-claro),
+        var(--rosa)
+    );
+
+    color: #351326;
+
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 30px rgba(255, 114, 182, 0.18);
+
+    transition: 0.35s ease;
+}
+
+.boton-inicio:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow:
+        0 15px 40px rgba(255, 114, 182, 0.3);
+}
+
+
+/* =====================================================
+   SECCIONES GENERALES
+   ===================================================== */
+
+section {
+    min-height: 70vh;
+
+    padding: 120px 7%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+}
+
+section:nth-child(even) {
+    background: var(--fondo-2);
+}
+
+section:nth-child(odd) {
+    background: var(--fondo);
+}
+
+
+/* =====================================================
+   TÍTULOS
+   ===================================================== */
+
+.seccion-titulo {
+    width: 100%;
+    max-width: 800px;
+
+    margin-bottom: 60px;
+
+    position: relative;
+}
+
+.seccion-titulo span {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: var(--rosa);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 4px;
+}
+
+.seccion-titulo h2 {
+    margin-bottom: 15px;
+
+    color: #ffe0ed;
+
+    font-size: clamp(2.7rem, 6vw, 5rem);
+
+    line-height: 1.1;
+
+    text-shadow:
+        0 0 25px rgba(255, 159, 207, 0.15);
+}
+
+.seccion-titulo p {
+    color: var(--gris);
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   SECCIÓN ELLA
+   ===================================================== */
+
+.ella-contenido {
+    width: min(900px, 100%);
+    padding: 50px;
+
+    border: 1px solid var(--borde);
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.07),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    transition: 0.4s ease;
+
+    /* NUEVO */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.ella-contenido:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(255, 159, 207, 0.45);
+
+    box-shadow:
+        0 25px 70px rgba(255, 114, 182, 0.08);
+}
+
+.ella-texto h3 {
+    margin-bottom: 18px;
+
+    color: var(--rosa-claro);
+
+    font-size: 2rem;
+}
+
+.ella-texto p {
+    color: var(--gris);
+
+    max-width: 680px;
+
+    margin: auto;
+
+    font-size: 1.05rem;
+}
+
+
+/* =====================================================
+   CUALIDADES
+   ===================================================== */
+
+.cualidades-contenedor {
+    width: min(1150px, 100%);
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.cualidad {
+    padding: 32px 24px;
+
+    border-radius: 22px;
+
+    background: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+
+    transition: 0.4s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.cualidad::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    color: rgba(255, 159, 207, 0.3);
+
+    font-size: 1rem;
+}
+
+.cualidad:hover {
+    transform: translateY(-8px);
+
+    background: rgba(255, 159, 207, 0.07);
+
+    border-color: rgba(255, 159, 207, 0.45);
+}
+
+.cualidad h3 {
+    margin-bottom: 12px;
+
+    color: var(--rosa-claro);
+
+    font-size: 1.3rem;
+}
+
+.cualidad p {
+    color: var(--gris);
+
+    font-size: 0.93rem;
+}
+
+
+/* =====================================================
+   GUSTOS
+   ===================================================== */
+
+#gustos {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 159, 207, 0.1),
+            transparent 55%
+        ),
+        var(--fondo-2);
+}
+
+.gustos-contenedor {
+    width: min(1100px, 100%);
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.gusto {
+    padding: 35px 25px;
+
+    border-radius: 25px;
+
+    border: 1px solid var(--borde);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    transition: 0.4s ease;
+}
+
+.gusto:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    background: rgba(255, 159, 207, 0.07);
+
+    border-color: rgba(255, 159, 207, 0.45);
+
+    box-shadow:
+        0 15px 40px rgba(255, 114, 182, 0.08);
+}
+
+.gusto > span {
+    display: block;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+}
+
+.gusto h3 {
+    margin-bottom: 8px;
+
+    color: var(--rosa-claro);
+}
+
+.gusto p {
+    color: var(--gris);
+
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   GALERÍA
+   ===================================================== */
+
+.galeria-vacia {
+    width: min(850px, 100%);
+
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    border: 1px dashed rgba(255, 159, 207, 0.4);
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 159, 207, 0.025);
+
+    color: var(--gris);
+
+    transition: 0.4s ease;
+}
+
+.galeria-vacia:hover {
+    background:
+        rgba(255, 159, 207, 0.055);
+
+    border-color: var(--rosa);
+}
+
+.galeria-vacia span {
+    font-size: 3.5rem;
+}
+
+.galeria-vacia h3 {
+    color: var(--rosa-claro);
+}
+
+
+/* =====================================================
+   VIDEOS
+   ===================================================== */
+
+#videos {
+    background: var(--fondo-2);
+}
+
+.videos-contenedor {
+    width: min(1100px, 100%);
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.video-card {
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+
+    transition: 0.4s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(255, 159, 207, 0.45);
+
+    box-shadow:
+        0 18px 45px rgba(255, 114, 182, 0.08);
+}
+
+.video-placeholder {
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 159, 207, 0.15),
+            rgba(20, 10, 20, 0.9)
+        );
+
+    color: var(--gris);
+}
+
+.icono-video {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 4px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 159, 207, 0.13);
+
+    border: 1px solid rgba(255, 159, 207, 0.3);
+
+    color: var(--rosa-claro);
+
+    font-size: 1.4rem;
+
+    transition: 0.3s ease;
+}
+
+.video-card:hover .icono-video {
+    transform: scale(1.12);
+
+    background:
+        rgba(255, 159, 207, 0.2);
+
+    box-shadow:
+        0 0 25px rgba(255, 114, 182, 0.2);
+}
+
+.video-info {
+    padding: 25px;
+
+    text-align: left;
+}
+
+.video-info h3 {
+    margin-bottom: 10px;
+
+    color: var(--rosa-claro);
+
+    font-size: 1.25rem;
+}
+
+.video-info p {
+    color: var(--gris);
+
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   MENSAJE FINAL
+   ===================================================== */
+
+#mensaje {
+    min-height: 85vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 114, 182, 0.16),
+            transparent 45%
+        ),
+        var(--fondo);
+}
+
+.mensaje-contenido {
+    width: min(800px, 100%);
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255, 159, 207, 0.35);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    position: relative;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Foca */
+
+.sello-foca {
+    font-size: 4rem;
+
+    margin-bottom: 15px;
+
+    animation:
+        focaFlota 3s ease-in-out infinite;
+}
+
+
+/* Carta */
+
+.carta {
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 207, 226, 0.06);
+
+    border: 1px solid rgba(255, 159, 207, 0.2);
+}
+
+.carta h3 {
+    margin-bottom: 20px;
+
+    color: var(--rosa-claro);
+
+    font-size: 2rem;
+}
+
+.carta p {
+    color: var(--gris);
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+.carta span {
+    color: var(--rosa);
+
+    font-size: 1rem;
+}
+
+
+/* =====================================================
+   ANIMACIONES
+   ===================================================== */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+@keyframes focaFlota {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(-3deg);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET / CELULAR
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+        gap: 16px;
+    }
+
+    .cualidades-contenedor,
+    .gustos-contenedor,
+    .videos-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MENÚ CELULAR
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px 0;
+
+        flex-direction: column;
+
+        gap: 22px;
+
+        background:
+            rgba(16, 10, 18, 0.97);
+
+        backdrop-filter: blur(18px);
+
+        transform: translateY(-120%);
+
+        opacity: 0;
+
+        pointer-events: none;
+
+        transition: 0.4s ease;
+    }
+
+    .nav-menu.active {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+        pointer-events: auto;
+    }
+
+    section {
+        padding: 100px 20px;
+    }
+
+    .cualidades-contenedor,
+    .gustos-contenedor,
+    .videos-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .ella-contenido {
+        padding: 30px 22px;
+    }
+
+    .mensaje-contenido {
+        padding: 25px 18px;
+    }
+
+    .carta {
+        padding: 25px 20px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES PEQUEÑOS
+   ===================================================== */
+
+@media (max-width: 450px) {
+
+    #inicio h1 {
+        font-size: 4.2rem;
+    }
+
+    .inicio-etiqueta {
+        letter-spacing: 3px;
+        font-size: 0.6rem;
+    }
+
+    .seccion-titulo h2 {
+        font-size: 2.7rem;
+    }
+
+}
+/* =====================================================
+   ✨ ANIMACIONES AL APARECER
+   ===================================================== */
+
+.animar {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* =====================================================
+   🌸 PORTADA ESPECIAL DE DULARY
+   ===================================================== */
+
+#inicio {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255, 145, 198, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(255, 190, 220, 0.12),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255, 120, 190, 0.10),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #0d080f,
+            #241323,
+            #120a14
+        );
+}
+
+
+/* Foca de la portada */
+
+.foca-portada {
+    font-size: 5rem;
+
+    margin-bottom: 5px;
+
+    filter:
+        drop-shadow(
+            0 0 18px rgba(255, 159, 207, 0.45)
+        );
+
+    animation:
+        focaPortada 3s ease-in-out infinite;
+}
+
+
+/* Nombre */
+
+#inicio h1 {
+    margin-bottom: 5px;
+
+    color: #ffe1ed;
+
+    font-size: clamp(5rem, 12vw, 10rem);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 15px rgba(255, 159, 207, 0.45),
+        0 0 45px rgba(255, 114, 182, 0.20);
+}
+
+
+/* Línea debajo del nombre */
+
+.linea-decorativa {
+    margin: 5px 0 20px;
+
+    color: var(--rosa);
+
+    font-size: 1rem;
+
+    letter-spacing: 4px;
+
+    opacity: 0.9;
+}
+
+
+/* Decoraciones flotantes */
+
+.decoracion {
+    position: absolute;
+
+    color: var(--rosa);
+
+    opacity: 0.45;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.decoracion-1 {
+    top: 25%;
+    left: 12%;
+
+    font-size: 2rem;
+
+    animation: decoracionFlota 4s ease-in-out infinite;
+}
+
+.decoracion-2 {
+    top: 35%;
+    right: 14%;
+
+    font-size: 1.5rem;
+
+    animation: decoracionFlota 5s ease-in-out infinite 1s;
+}
+
+.decoracion-3 {
+    bottom: 20%;
+    left: 20%;
+
+    font-size: 1.4rem;
+
+    animation: decoracionFlota 4.5s ease-in-out infinite 0.5s;
+}
+
+.decoracion-4 {
+    bottom: 25%;
+    right: 20%;
+
+    font-size: 1.8rem;
+
+    animation: decoracionFlota 5s ease-in-out infinite 1.5s;
+}
+
+
+/* Animación de la foca */
+
+@keyframes focaPortada {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(-4deg);
+    }
+
+}
+
+
+/* Animación de las decoraciones */
+
+@keyframes decoracionFlota {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: translateY(-18px) scale(1.12);
+        opacity: 0.75;
+    }
+
+}
+
+
+/* Celular */
+
+@media (max-width: 600px) {
+
+    .foca-portada {
+        font-size: 4rem;
+    }
+
+    .decoracion-1 {
+        left: 5%;
+    }
+
+    .decoracion-2 {
+        right: 5%;
+    }
+
+    .decoracion-3 {
+        left: 8%;
+    }
+
+    .decoracion-4 {
+        right: 8%;
+    }
+
+}
+/* =====================================================
+   🌷 SECCIÓN ELLA - DULARY
+   ===================================================== */
+
+#ella {
+    overflow: hidden;
+}
+
+
+/* Contenedor principal */
+
+.ella-contenido {
+    width: min(1100px, 100%);
+
+    display: grid;
+
+   grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255, 159, 207, 0.3);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 159, 207, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Brillo de fondo */
+
+.ella-contenido::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -150px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 159, 207, 0.08);
+
+    filter: blur(40px);
+
+    pointer-events: none;
+}
+
+
+/* Foca decorativa */
+
+.ella-decoracion {
+    position: absolute;
+
+    right: 25px;
+    bottom: 15px;
+
+    font-size: 4rem;
+
+    opacity: 0.8;
+
+    animation:
+        focaElla 4s ease-in-out infinite;
+}
+
+
+/* Texto */
+
+.ella-texto {
+    text-align: left;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.ella-texto h3 {
+    margin-bottom: 20px;
+
+    color: var(--rosa-claro);
+
+    font-size: 2.5rem;
+}
+
+.ella-texto p {
+    margin-bottom: 18px;
+
+    color: var(--gris);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* Frase especial */
+
+.frase-ella {
+    margin-top: 28px;
+
+    padding: 20px 25px;
+
+    border-left: 3px solid var(--rosa);
+
+    color: var(--rosa-claro);
+
+    background:
+        rgba(255, 159, 207, 0.05);
+
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   DATOS
+   ===================================================== */
+
+.datos-ella {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(255, 159, 207, 0.25);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+
+.dato {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.dato:hover {
+    background:
+        rgba(255, 159, 207, 0.08);
+
+    transform: translateX(5px);
+}
+
+.dato > span {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 159, 207, 0.1);
+
+    border: 1px solid rgba(255, 159, 207, 0.2);
+
+    font-size: 1.4rem;
+}
+
+.dato strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--rosa-claro);
+
+    font-size: 0.85rem;
+}
+
+.dato p {
+    color: var(--gris);
+
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   ANIMACIÓN DE LA FOCA
+   ===================================================== */
+
+@keyframes focaElla {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotate(4deg);
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .ella-contenido {
+        grid-template-columns: 1fr;
+
+        padding: 30px 22px;
+    }
+
+    .ella-texto {
+        text-align: center;
+    }
+
+    .ella-texto h3 {
+        font-size: 2.2rem;
+    }
+
+    .datos-ella {
+        padding: 15px;
+    }
+
+    .ella-decoracion {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        order: 3;
+
+        text-align: center;
+    }
+
+}
+/* =====================================================
+   🌷 CUALIDADES DE MI NIÑA
+   ===================================================== */
+
+.cualidad {
+    position: relative;
+    overflow: hidden;
+
+    padding: 35px 28px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.07),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 159, 207, 0.25);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.cualidad:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(255, 159, 207, 0.55);
+
+    box-shadow:
+        0 18px 45px rgba(255, 114, 182, 0.12);
+}
+
+
+/* Brillo */
+
+.cualidad::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    top: -60px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 159, 207, 0.12);
+
+    filter: blur(25px);
+
+    transition: 0.4s ease;
+}
+
+.cualidad:hover::before {
+    transform: scale(1.5);
+}
+
+
+/* Iconos */
+
+.cualidad-icono {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 159, 207, 0.09);
+
+    border: 1px solid rgba(255, 159, 207, 0.25);
+
+    font-size: 1.8rem;
+
+    transition: 0.4s ease;
+}
+
+.cualidad:hover .cualidad-icono {
+    transform: scale(1.12) rotate(5deg);
+
+    background:
+        rgba(255, 159, 207, 0.16);
+}
+
+
+/* Título */
+
+.cualidad h3 {
+    margin-bottom: 13px;
+
+    color: var(--rosa-claro);
+
+    font-size: 1.35rem;
+}
+
+
+/* Texto */
+
+.cualidad p {
+    color: var(--gris);
+
+    font-size: 0.92rem;
+
+    line-height: 1.75;
+}
+
+/* =====================================================
+   📸 FOTOS - SECCIÓN ELLA
+   ===================================================== */
+
+.ella-fotos {
+    grid-column: 1 / -1;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+.foto-espacio {
+    min-height: 210px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border-radius: 22px;
+
+    border: 1px dashed rgba(255, 159, 207, 0.35);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    color: var(--gris);
+
+    transition: 0.4s ease;
+
+    overflow: hidden;
+}
+
+
+.foto-espacio span {
+    font-size: 3rem;
+
+    opacity: 0.8;
+}
+
+
+.foto-espacio p {
+    color: var(--rosa-claro);
+
+    font-size: 0.9rem;
+}
+
+
+.foto-espacio:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--rosa);
+
+    background:
+        rgba(255, 159, 207, 0.12);
+
+    box-shadow:
+        0 15px 40px rgba(255, 114, 182, 0.10);
+}
+
+
+/* =====================================================
+   📱 FOTOS ELLA - CELULAR
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .ella-fotos {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-espacio {
+        min-height: 230px;
+    }
+
+}
+/* =====================================================
+   📸 FOTOS DE LAS CUALIDADES
+   ===================================================== */
+
+.cualidad-foto {
+
+    width: 100%;
+    height: 180px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border-radius: 18px;
+
+    border: 1px dashed rgba(255, 159, 207, 0.35);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+}
+
+
+.cualidad-foto span {
+    font-size: 2.8rem;
+
+    opacity: 0.8;
+}
+
+
+.cualidad-foto p {
+    color: var(--rosa-claro);
+
+    font-size: 0.8rem;
+}
+
+
+.cualidad:hover .cualidad-foto {
+
+    border-color: var(--rosa);
+
+    transform: scale(1.02);
+
+    background:
+        rgba(255, 159, 207, 0.12);
+}
+
+
+/* =====================================================
+   📱 CUALIDADES EN CELULAR
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .cualidad-foto {
+        height: 210px;
+    }
+
+}
+/* =====================================================
+   📸 FOTOS DE LOS GUSTOS
+   ===================================================== */
+
+.gusto-foto {
+
+    width: 100%;
+    height: 180px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border-radius: 18px;
+
+    border: 1px dashed rgba(255, 159, 207, 0.35);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+}
+
+
+.gusto-foto span {
+    font-size: 2.8rem;
+
+    opacity: 0.8;
+}
+
+
+.gusto-foto p {
+    color: var(--rosa-claro);
+
+    font-size: 0.8rem;
+}
+
+
+.gusto:hover .gusto-foto {
+
+    transform: scale(1.02);
+
+    border-color: var(--rosa);
+
+    background:
+        rgba(255, 159, 207, 0.12);
+}
+
+
+/* Icono del gusto */
+
+.gusto-icono {
+
+    display: block;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   📱 GUSTOS EN CELULAR
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .gusto-foto {
+        height: 210px;
+    }
+
+}
+/* =====================================================
+   💗 CUALIDADES - CORRECCIÓN
+   ===================================================== */
+
+#cualidades {
+    padding: 100px 7%;
+    background: var(--fondo);
+}
+
+.cualidades-contenedor {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cualidad {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 25px;
+    background: var(--tarjeta);
+    border: 1px solid var(--borde);
+    text-align: center;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.cualidad:hover {
+    transform: translateY(-8px);
+}
+
+.cualidad-foto {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    border: 1px dashed rgba(255, 159, 207, 0.4);
+    background: linear-gradient(
+        145deg,
+        rgba(255, 159, 207, 0.10),
+        rgba(255, 255, 255, 0.03)
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.cualidad-foto span {
+    font-size: 3rem;
+}
+
+.cualidad-foto p {
+    margin: 0;
+    color: var(--rosa-claro);
+    font-size: 0.85rem;
+}
+
+.cualidad-icono {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.cualidad h3 {
+    color: var(--rosa-claro);
+    margin-bottom: 12px;
+}
+
+.cualidad > p {
+    color: var(--gris);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.cualidad:hover .cualidad-foto {
+    border-color: var(--rosa);
+    transform: scale(1.02);
+    background: rgba(255, 159, 207, 0.12);
+}
+
+/* 📱 TABLET */
+@media (max-width: 900px) {
+
+    .cualidades-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* 📱 CELULAR */
+@media (max-width: 600px) {
+
+    #cualidades {
+        padding: 80px 5%;
+    }
+
+    .cualidades-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .cualidad-foto {
+        height: 210px;
+    }
+
+}
+
+/* =====================================================
+   📸 GALERÍA GRANDE
+   ===================================================== */
+
+#galeria {
+    padding: 100px 7%;
+    background: var(--fondo-2);
+}
+
+.galeria-contenedor {
+    max-width: 1200px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* 📸 FOTOS */
+
+.galeria-foto {
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 22px;
+    border: 1px dashed rgba(255, 159, 207, 0.4);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.10),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.galeria-foto span {
+    font-size: 3rem;
+    margin-bottom: 8px;
+}
+
+.galeria-foto p {
+    margin: 0;
+    color: var(--rosa-claro);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.galeria-foto:hover {
+    transform: translateY(-7px);
+    border-color: var(--rosa);
+
+    box-shadow:
+        0 15px 40px rgba(255, 114, 182, 0.12);
+}
+
+.galeria-destacada {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 300px;
+}
+
+.galeria-destacada span {
+    font-size: 3rem;
+}
+
+.galeria-destacada p {
+    font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   💗 CONTADOR DE NUESTRO AMOR
+   ===================================================== */
+
+.galeria-contenedor > .contador-amor {
+    grid-column: 1 / -1;
+    width: 100%;
+    box-sizing: border-box;
+
+    text-align: center;
+    padding: 35px 25px;
+    margin: 10px 0;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.12),
+            rgba(255, 255, 255, 0.03)
+        );
+
+    border: 1px solid rgba(255, 159, 207, 0.3);
+
+    box-shadow:
+        0 15px 40px rgba(255, 114, 182, 0.08);
+}
+
+.contador-amor > span {
+    font-size: 2.5rem;
+}
+
+.contador-amor h3 {
+    margin: 10px 0 25px;
+    color: var(--rosa-claro);
+    font-size: 1.4rem;
+}
+
+.contador-numeros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contador-numeros div {
+    min-width: 90px;
+    padding: 15px 12px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 159, 207, 0.2);
+}
+
+.contador-numeros strong {
+    display: block;
+    color: var(--rosa);
+    font-size: 1.8rem;
+}
+
+.contador-numeros small {
+    display: block;
+    margin-top: 5px;
+    color: var(--gris);
+    font-size: 0.75rem;
+}
+
+
+/* 💗 FRASE */
+
+.galeria-frase {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 70px 20px 50px;
+}
+
+.galeria-frase span {
+    font-size: 2.5rem;
+}
+
+.galeria-frase p {
+    color: var(--gris);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+
+/* 📱 TABLET */
+
+@media (max-width: 900px) {
+
+    .galeria-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria-contenedor > .contador-amor {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* 📱 CELULAR */
+
+@media (max-width: 600px) {
+
+    #galeria {
+        padding: 80px 5%;
+    }
+
+    .galeria-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-foto,
+    .galeria-destacada {
+        height: 230px;
+        min-height: 230px;
+    }
+
+    .galeria-contenedor > .contador-amor {
+        grid-column: 1 / -1;
+    }
+
+    .contador-amor {
+        padding: 28px 15px;
+    }
+
+    .contador-amor h3 {
+        font-size: 1.1rem;
+    }
+
+    .contador-numeros {
+        gap: 8px;
+    }
+
+    .contador-numeros div {
+        min-width: 75px;
+        padding: 12px 8px;
+    }
+
+    .contador-numeros strong {
+        font-size: 1.4rem;
+    }
+}
+
+/* 💗 FRASE */
+
+.galeria-frase {
+    max-width: 700px;
+    margin: 45px auto 0;
+    text-align: center;
+}
+
+.galeria-frase span {
+    font-size: 2.5rem;
+}
+
+.galeria-frase p {
+    color: var(--gris);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+/* 📱 TABLET */
+
+@media (max-width: 900px) {
+
+    .galeria-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* 📱 CELULAR */
+
+@media (max-width: 600px) {
+
+    #galeria {
+        padding: 80px 5%;
+    }
+
+    .galeria-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-foto,
+    .galeria-destacada {
+        height: 230px;
+        min-height: 230px;
+    }
+
+}
+
+
+/* =====================================================
+   💗 CONTADOR DE NUESTRO AMOR
+   ===================================================== */
+
+.galeria-contenedor > .contador-amor {
+    grid-column: 1 / -1;
+    position: relative;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 32% 68%;
+    align-items: center;
+
+    min-height: 300px;
+
+    padding: 45px 40px;
+    margin: 15px 0;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at 10% 50%,
+            rgba(255, 70, 180, 0.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 50%,
+            rgba(255, 130, 220, 0.16),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 100, 190, 0.14),
+            rgba(55, 10, 45, 0.65)
+        );
+
+    border: 1px solid rgba(255, 130, 215, 0.75);
+
+    box-shadow:
+        0 0 20px rgba(255, 80, 190, 0.25),
+        0 0 50px rgba(255, 80, 190, 0.12),
+        inset 0 0 45px rgba(255, 100, 200, 0.08);
+
+    overflow: hidden;
+
+    transition: 0.5s ease;
+}
+
+
+/* ✨ BRILLOS DECORATIVOS */
+
+.galeria-contenedor > .contador-amor::before {
+    content: "♡   ♥   ♡";
+
+    position: absolute;
+    top: 18px;
+    left: 30px;
+
+    color: rgba(255, 150, 220, 0.55);
+
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+
+    pointer-events: none;
+}
+
+.galeria-contenedor > .contador-amor::after {
+    content: "♡";
+
+    position: absolute;
+
+    bottom: 12px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: rgba(255, 130, 210, 0.65);
+
+    font-size: 3rem;
+
+    text-shadow:
+        0 0 15px rgba(255, 80, 190, 0.8);
+
+    pointer-events: none;
+}
+
+
+/* 💗 CORAZÓN */
+
+.contador-amor > span {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: block;
+
+    margin: 0 auto 8px;
+
+    font-size: 4.5rem;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 100, 190, 0.9))
+        drop-shadow(0 0 20px rgba(255, 80, 190, 0.5));
+
+    animation: latidoContador 2s infinite ease-in-out;
+}
+
+
+/* 💕 TÍTULO */
+
+.contador-amor h3 {
+    grid-column: 1;
+    grid-row: 2;
+
+    width: auto;
+
+    margin: 0 auto;
+
+    max-width: 300px;
+
+    color: var(--rosa-claro);
+
+    font-size: 1.7rem;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 8px rgba(255, 120, 205, 0.7),
+        0 0 20px rgba(255, 80, 190, 0.35);
+}
+
+
+/* ⏱️ CONTENEDOR DE LOS NÚMEROS */
+
+.contador-numeros {
+    grid-column: 2;
+    grid-row: 1 / 3;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: nowrap;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* 💎 CAJAS */
+
+.contador-numeros div {
+    position: relative;
+
+    min-width: 92px;
+
+    padding: 22px 12px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 100, 190, 0.20),
+            rgba(255, 255, 255, 0.035)
+        );
+
+    border: 1px solid rgba(255, 130, 215, 0.55);
+
+    box-shadow:
+        0 0 15px rgba(255, 80, 180, 0.12),
+        inset 0 0 20px rgba(255, 120, 210, 0.07);
+
+    transition: 0.4s ease;
+
+    overflow: hidden;
+}
+
+
+/* ✨ BRILLO AL PASAR EL MOUSE */
+
+.contador-numeros div:hover {
+    transform: translateY(-8px) scale(1.04);
+
+    border-color: rgba(255, 180, 230, 0.95);
+
+    box-shadow:
+        0 0 25px rgba(255, 80, 190, 0.35),
+        inset 0 0 25px rgba(255, 120, 210, 0.10);
+}
+
+
+/* 🔢 NÚMEROS */
+
+.contador-numeros strong {
+    display: block;
+
+    color: #ff79ca;
+
+    font-size: 2.3rem;
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 8px rgba(255, 80, 190, 0.9),
+        0 0 20px rgba(255, 80, 190, 0.5);
+}
+
+
+/* 📝 NOMBRES */
+
+.contador-numeros small {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #f4b6dc;
+
+    font-size: 0.72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* 💓 ANIMACIÓN */
+
+@keyframes latidoContador {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+/* 📱 TABLET */
+
+@media (max-width: 1000px) {
+
+    .galeria-contenedor > .contador-amor {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 40px 25px;
+    }
+
+    .contador-amor > span {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .contador-amor h3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .contador-numeros {
+        grid-column: 1;
+        grid-row: 3;
+
+        flex-wrap: wrap;
+    }
+}
+
+
+/* 📱 CELULAR */
+
+@media (max-width: 600px) {
+
+    .galeria-contenedor > .contador-amor {
+        padding: 35px 12px;
+    }
+
+    .contador-amor > span {
+        font-size: 3.5rem;
+    }
+
+    .contador-amor h3 {
+        font-size: 1.35rem;
+    }
+
+    .contador-numeros {
+        gap: 8px;
+    }
+
+    .contador-numeros div {
+        min-width: 72px;
+        padding: 16px 8px;
+    }
+
+    .contador-numeros strong {
+        font-size: 1.6rem;
+    }
+
+    .contador-numeros small {
+        font-size: 0.58rem;
+    }
+}
+
+/* 💗 FRASE */
+
+.galeria-frase {
+    max-width: 700px;
+    margin: 45px auto 0;
+    text-align: center;
+}
+
+.galeria-frase span {
+    font-size: 2.5rem;
+}
+
+.galeria-frase p {
+    color: var(--gris);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+/* 📱 TABLET */
+
+@media (max-width: 900px) {
+
+    .galeria-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 220px;
+    }
+
+    .galeria-destacada {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+}
+
+/* 📱 CELULAR */
+
+@media (max-width: 600px) {
+
+    #galeria {
+        padding: 80px 5%;
+    }
+
+    .galeria-contenedor {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 230px;
+    }
+
+    .galeria-destacada {
+        grid-column: span 1;
+        grid-row: span 1;
+        min-height: 230px;
+    }
+
+    .galeria-destacada span {
+        font-size: 3.5rem;
+    }
+
+}
+/* =====================================================
+   📸 SELECTOR DE FOTOS DE LA GALERÍA
+   ===================================================== */
+
+.galeria-foto {
+    position: relative;
+    cursor: pointer;
+}
+
+.selector-foto {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.contenido-foto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+
+.contenido-foto span {
+    font-size: 3rem;
+}
+
+.contenido-foto p {
+    margin: 8px 0 0;
+    color: var(--rosa-claro);
+    font-size: 0.85rem;
+}
+
+.galeria-foto:hover .contenido-foto {
+    transform: scale(1.05);
+}
+
+/* 🖼️ FOTO SELECCIONADA */
+
+.galeria-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ocultar el contenido cuando ya existe una foto */
+
+.galeria-foto.tiene-foto .contenido-foto {
+    display: none;
+}
+/* =====================================================
+   🎬 SELECTOR DE VIDEOS
+   ===================================================== */
+
+.video-placeholder {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.selector-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.contenido-video {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+
+.contenido-video p {
+    margin-top: 10px;
+    color: var(--rosa-claro);
+}
+
+.video-placeholder:hover .contenido-video {
+    transform: scale(1.05);
+}
+
+/* Video seleccionado */
+
+.video-placeholder video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* =====================================================
+   💌 FOTOS DE LA CARTA
+   ===================================================== */
+
+.mensaje-foto,
+.mensaje-foto-extra {
+    position: relative;
+    min-height: 280px;
+
+    border-radius: 25px;
+    border: 1px dashed rgba(255, 159, 207, 0.4);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.10),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 0.4s ease;
+}
+
+.mensaje-foto:hover,
+.mensaje-foto-extra:hover {
+    transform: translateY(-7px);
+    border-color: var(--rosa);
+}
+
+.selector-mensaje-foto {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.contenido-mensaje-foto {
+    width: 100%;
+    height: 100%;
+
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+}
+
+.contenido-mensaje-foto span {
+    font-size: 3rem;
+}
+
+.contenido-mensaje-foto p {
+    color: var(--rosa-claro);
+    margin-top: 10px;
+}
+
+.mensaje-foto img,
+.mensaje-foto-extra img {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+
+    object-fit: cover;
+    display: block;
+}
+
+/* FOTO EXTRA */
+
+.mensaje-foto-extra {
+    max-width: 500px;
+    margin: 30px auto 0;
+}
+
+/* CARTA */
+
+.carta {
+    position: relative;
+    z-index: 2;
+}
+
+.carta-etiqueta {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: var(--rosa);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+}
+
+.carta h3 {
+    margin-bottom: 20px;
+}
+
+.carta p {
+    line-height: 1.8;
+}
+
+.carta-poema {
+    margin: 25px 0;
+    padding: 20px;
+
+    border-left: 3px solid var(--rosa);
+
+    background: rgba(255, 159, 207, 0.06);
+    border-radius: 0 15px 15px 0;
+}
+
+.carta-poema p {
+    margin: 0;
+    font-style: italic;
+}
+
+.carta-poema span {
+    display: block;
+    margin-top: 15px;
+}
+
+.firma {
+    color: var(--rosa-claro);
+    margin-top: 20px;
+    font-weight: bold;
+}
+/* =====================================================
+   🌸 FONDO ROSADO GENERAL
+   ===================================================== */
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 105, 180, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(255, 63, 159, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 80%,
+            rgba(255, 182, 217, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #180611,
+            #270b1d,
+            #1b0715
+        );
+
+    background-attachment: fixed;
+}
+
+/* 🌸 Secciones con diferentes tonos */
+
+#inicio {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 105, 180, 0.18),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #210817,
+            #350d25,
+            #1b0613
+        );
+}
+
+#ella {
+    background:
+        linear-gradient(
+            135deg,
+            #1d0715,
+            #2e0b20
+        );
+}
+
+#cualidades {
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 105, 180, 0.12),
+            transparent 30%
+        ),
+        #230918;
+}
+
+#gustos {
+    background:
+        linear-gradient(
+            135deg,
+            #2a0b1f,
+            #1c0715
+        );
+}
+
+#galeria {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 105, 180, 0.15),
+            transparent 35%
+        ),
+        #250a1c;
+}
+
+#videos {
+    background:
+        linear-gradient(
+            135deg,
+            #1d0715,
+            #300c23
+        );
+}
+
+#mensaje {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 105, 180, 0.18),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #29091e,
+            #17050f
+        );
+}
+/* =====================================================
+   💗 TARJETAS ROSADAS
+   ===================================================== */
+
+.cualidad,
+.gusto,
+.video-card,
+.carta {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 105, 180, 0.12),
+            rgba(255, 255, 255, 0.035)
+        );
+
+    border-color: rgba(255, 159, 207, 0.25);
+
+    box-shadow:
+        0 15px 40px rgba(255, 63, 159, 0.08);
+}
+
+.cualidad:hover,
+.gusto:hover,
+.video-card:hover {
+    box-shadow:
+        0 20px 50px rgba(255, 63, 159, 0.18);
+}
+/* =====================================================
+   💗 PORTADA PROFESIONAL
+   ===================================================== */
+
+#inicio {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 7% 80px;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(255, 105, 180, 0.22),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 182, 217, 0.12),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #180611,
+            #330d25,
+            #1c0715
+        );
+}
+
+/* =====================================================
+   ✨ BRILLOS
+   ===================================================== */
+
+.portada-brillo {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.brillo-1 {
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 105, 180, 0.15);
+    top: 10%;
+    left: 5%;
+}
+
+.brillo-2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 63, 159, 0.12);
+    bottom: 5%;
+    right: 5%;
+}
+
+/* =====================================================
+   ♡ CORAZONES
+   ===================================================== */
+
+.portada-corazones span {
+    position: absolute;
+    color: rgba(255, 182, 217, 0.25);
+    font-size: 2rem;
+    animation: flotarCorazon 6s ease-in-out infinite;
+}
+
+.portada-corazones span:nth-child(1) {
+    top: 20%;
+    left: 8%;
+}
+
+.portada-corazones span:nth-child(2) {
+    top: 65%;
+    left: 45%;
+    animation-delay: 1s;
+}
+
+.portada-corazones span:nth-child(3) {
+    top: 15%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.portada-corazones span:nth-child(4) {
+    bottom: 15%;
+    right: 7%;
+    animation-delay: 3s;
+}
+
+@keyframes flotarCorazon {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(8deg);
+    }
+
+}
+
+/* =====================================================
+   📦 CONTENIDO
+   ===================================================== */
+
+.inicio-contenido {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================================
+   💗 TEXTO
+   ===================================================== */
+
+.portada-texto {
+    max-width: 600px;
+}
+
+.portada-etiqueta {
+    display: inline-block;
+
+    color: var(--rosa-claro);
+
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+.portada-foca {
+    font-size: 3rem;
+    margin-bottom: 5px;
+
+    animation: focaFlotando 4s ease-in-out infinite;
+}
+
+.portada-texto h1 {
+    font-size: clamp(4rem, 7vw, 7rem);
+    line-height: 0.95;
+    margin: 0;
+
+    font-weight: 800;
+    letter-spacing: -4px;
+}
+
+.portada-texto h1 span {
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff69b4,
+            #ffb6d9,
+            #ff69b4
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 200%;
+
+    animation: brilloTexto 5s ease infinite;
+}
+
+@keyframes brilloTexto {
+
+    0%, 100% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+}
+
+.portada-linea {
+    width: 90px;
+    height: 3px;
+
+    margin: 28px 0;
+
+    background: var(--rosa);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+.portada-descripcion {
+    max-width: 520px;
+
+    color: var(--gris);
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.portada-frase {
+    max-width: 500px;
+
+    color: var(--rosa-claro);
+
+    font-style: italic;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   🌸 BOTÓN
+   ===================================================== */
+
+.boton-portada {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 25px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rosa),
+            var(--rosa-fuerte)
+        );
+
+    box-shadow:
+        0 10px 35px rgba(255, 63, 159, 0.25);
+
+    transition: 0.4s ease;
+}
+
+.boton-portada span {
+    font-size: 1.3rem;
+    transition: 0.3s ease;
+}
+
+.boton-portada:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 45px rgba(255, 63, 159, 0.4);
+}
+
+.boton-portada:hover span {
+    transform: translateX(5px);
+}
+
+/* =====================================================
+   📸 FOTOS DE PORTADA
+   ===================================================== */
+
+.portada-fotos {
+    position: relative;
+
+    width: 100%;
+    max-width: 520px;
+
+    height: 570px;
+
+    margin: auto;
+}
+
+/* FOTO */
+
+.portada-foto {
+    position: absolute;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 105, 180, 0.15),
+            rgba(255, 255, 255, 0.04)
+        );
+
+    border: 1px solid rgba(255, 182, 217, 0.35);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35),
+        0 0 40px rgba(255, 105, 180, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.foto-principal {
+    width: 350px;
+    height: 460px;
+
+    top: 20px;
+    left: 30px;
+
+    border-radius: 30px;
+
+    transform: rotate(-5deg);
+}
+
+.foto-secundaria {
+    width: 260px;
+    height: 330px;
+
+    right: 0;
+    bottom: 25px;
+
+    border-radius: 28px;
+
+    transform: rotate(7deg);
+
+    z-index: 2;
+}
+
+.portada-foto:hover {
+    transform: rotate(0) scale(1.04);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(255, 105, 180, 0.2);
+
+    z-index: 5;
+}
+
+/* =====================================================
+   📂 SELECTOR
+   ===================================================== */
+
+.selector-portada {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.contenido-portada-foto {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    pointer-events: none;
+}
+
+.contenido-portada-foto span {
+    font-size: 3rem;
+}
+
+.contenido-portada-foto p {
+    color: var(--rosa-claro);
+    font-size: 0.85rem;
+}
+
+/* FOTO REAL */
+
+.portada-foto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================================
+   🦭 DECORACIONES
+   ===================================================== */
+
+.foto-corazon {
+    position: absolute;
+
+    top: 5px;
+    right: 55px;
+
+    color: var(--rosa);
+
+    font-size: 4rem;
+
+    transform: rotate(15deg);
+
+    filter:
+        drop-shadow(
+            0 0 15px rgba(255, 105, 180, 0.5)
+        );
+
+    animation: latido 2.5s ease-in-out infinite;
+
+    z-index: 4;
+}
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: rotate(15deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(15deg) scale(1.12);
+    }
+
+}
+
+.foto-foca {
+    position: absolute;
+
+    left: 5px;
+    bottom: 15px;
+
+    font-size: 3rem;
+
+    z-index: 4;
+
+    animation: focaFlotando 4s ease-in-out infinite;
+}
+
+/* =====================================================
+   ↓ SCROLL
+   ===================================================== */
+
+.portada-scroll {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    color: rgba(255, 182, 217, 0.6);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 3px;
+
+    z-index: 5;
+}
+
+.portada-scroll div {
+    font-size: 1.5rem;
+
+    margin-top: 5px;
+
+    animation: bajar 1.5s ease-in-out infinite;
+}
+
+@keyframes bajar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+}
+
+/* =====================================================
+   📱 RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    #inicio {
+        padding-top: 120px;
+    }
+
+    .inicio-contenido {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .portada-texto {
+        margin: auto;
+    }
+
+    .portada-linea {
+        margin: 25px auto;
+    }
+
+    .portada-descripcion,
+    .portada-frase {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portada-fotos {
+        height: 500px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    #inicio {
+        padding: 110px 5% 80px;
+    }
+
+    .portada-texto h1 {
+        font-size: 4rem;
+    }
+
+    .portada-fotos {
+        height: 430px;
+        max-width: 350px;
+    }
+
+    .foto-principal {
+        width: 240px;
+        height: 330px;
+
+        left: 10px;
+    }
+
+    .foto-secundaria {
+        width: 190px;
+        height: 250px;
+
+        right: 0;
+    }
+
+    .foto-corazon {
+        right: 20px;
+    }
+
+    .portada-scroll {
+        display: none;
+    }
+
+}
+/* =====================================================
+   🦭 FOCA TIRANDO BESITOS
+   ===================================================== */
+
+.foca-besitos {
+    position: absolute;
+    left: 4%;
+    bottom: 12%;
+
+    width: 150px;
+    height: 150px;
+
+    z-index: 6;
+    pointer-events: none;
+}
+
+/* 🦭 FOCA */
+
+.foca-personaje {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    font-size: 5rem;
+
+    animation:
+        focaBesito 3s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 10px 15px rgba(0, 0, 0, 0.25)
+        );
+}
+
+@keyframes focaBesito {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    25% {
+        transform: translateY(-8px) rotate(3deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    70% {
+        transform: translateY(-5px) rotate(2deg);
+    }
+
+}
+
+/* 💋 BESITOS */
+
+.besito {
+    position: absolute;
+
+    left: 65px;
+    bottom: 65px;
+
+    font-size: 1.5rem;
+
+    opacity: 0;
+
+    animation:
+        lanzarBesito 3s ease-in-out infinite;
+}
+
+/* Diferentes posiciones */
+
+.besito-1 {
+    animation-delay: 0.3s;
+}
+
+.besito-2 {
+    animation-delay: 1s;
+}
+
+.besito-3 {
+    animation-delay: 1.7s;
+}
+
+.besito-4 {
+    animation-delay: 2.4s;
+}
+
+@keyframes lanzarBesito {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(0, 0)
+            scale(0.4);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(70px, -70px)
+            scale(1.1);
+    }
+
+}
+
+/* 📱 CELULAR */
+
+@media (max-width: 600px) {
+
+    .foca-besitos {
+        left: 2%;
+        bottom: 5%;
+
+        transform: scale(0.75);
+    }
+
+}
+/* =====================================================
+   ✨ TIPOGRAFÍA PROFESIONAL
+   ===================================================== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.portada-texto h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.portada-etiqueta,
+.portada-descripcion,
+.portada-frase,
+.boton-portada {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =====================================================
+   🫙 BOTE DE LAS 10 RAZONES
+   ===================================================== */
+
+.bote-razones {
+    position: relative;
+
+    min-height: 500px;
+
+    padding: 35px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255, 182, 217, 0.12),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(255, 105, 180, 0.12),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 159, 207, 0.3);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.25),
+        0 0 35px rgba(255, 105, 180, 0.08);
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+}
+
+.bote-razones:hover {
+    border-color: rgba(255, 159, 207, 0.55);
+
+    box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.3),
+        0 0 45px rgba(255, 105, 180, 0.13);
+}
+
+
+/* ✨ Decoraciones */
+
+.bote-razones::before {
+    content: "♡";
+
+    position: absolute;
+
+    top: 18px;
+    left: 22px;
+
+    color: rgba(255, 182, 217, 0.35);
+
+    font-size: 1.8rem;
+}
+
+.bote-razones::after {
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 18px;
+    right: 22px;
+
+    color: rgba(255, 182, 217, 0.35);
+
+    font-size: 1.5rem;
+}
+
+
+/* ✨ Tapa */
+
+.bote-tapa {
+    color: var(--rosa-claro);
+
+    font-size: 1.2rem;
+
+    margin-bottom: -5px;
+
+    animation: brilloBote 2.5s ease-in-out infinite;
+}
+
+
+/* 🫙 Bote */
+
+.bote-icono {
+    font-size: 4.5rem;
+
+    margin-bottom: 10px;
+
+    filter:
+        drop-shadow(
+            0 0 18px rgba(255, 105, 180, 0.4)
+        );
+
+    animation: boteFlotando 3s ease-in-out infinite;
+}
+
+
+/* Etiqueta */
+
+.bote-etiqueta {
+    color: var(--rosa);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Título */
+
+.bote-razones h3 {
+    color: var(--rosa-claro);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+
+
+/* Descripción */
+
+.bote-descripcion {
+    max-width: 380px;
+
+    color: var(--gris);
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+
+/* Contenedor de razón */
+
+.razon-contenedor {
+    width: 100%;
+
+    max-width: 450px;
+
+    min-height: 145px;
+
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 159, 207, 0.07);
+
+    border: 1px solid rgba(255, 159, 207, 0.2);
+
+    margin-bottom: 20px;
+
+    transition: 0.4s ease;
+}
+
+
+/* Número */
+
+.razon-numero {
+    color: var(--rosa);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Título de la razón */
+
+.razon-contenedor h4 {
+    color: var(--rosa-claro);
+
+    font-size: 1.3rem;
+
+    margin-bottom: 8px;
+}
+
+
+/* Texto */
+
+.razon-contenedor p {
+    color: var(--gris);
+
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* 💌 Botón principal */
+
+.boton-razon,
+.boton-carta {
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 50px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+/* Botón abrir bote */
+
+.boton-razon {
+    color: #351326;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rosa-claro),
+            var(--rosa)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(255, 105, 180, 0.2);
+}
+
+.boton-razon:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 35px rgba(255, 105, 180, 0.35);
+}
+
+
+/* 💌 Botón carta */
+
+.boton-carta {
+    display: none;
+
+    margin-top: 10px;
+
+    color: var(--rosa-claro);
+
+    background:
+        rgba(255, 159, 207, 0.08);
+
+    border: 1px solid rgba(255, 159, 207, 0.3);
+}
+
+.boton-carta:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(255, 159, 207, 0.15);
+}
+
+
+/* Animación de nueva razón */
+
+.razon-nueva {
+    animation:
+        aparecerRazon 0.5s ease;
+}
+
+
+@keyframes aparecerRazon {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+@keyframes boteFlotando {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-8px)
+            rotate(3deg);
+    }
+
+}
+
+
+@keyframes brilloBote {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+/* 📱 Celular */
+
+@media (max-width: 600px) {
+
+    .bote-razones {
+        min-height: 480px;
+
+        padding: 30px 20px;
+    }
+
+    .bote-razones h3 {
+        font-size: 1.6rem;
+    }
+
+    .bote-icono {
+        font-size: 4rem;
+    }
+
+    .razon-contenedor {
+        min-height: 160px;
+
+        padding: 18px;
+    }
+
+}
+/* =====================================================
+   💌 CARTA FINAL
+   ===================================================== */
+
+.carta-final {
+    max-width: 850px;
+
+    margin: 40px auto 0;
+
+    padding: 45px 40px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.13),
+            rgba(255, 255, 255, 0.035)
+        );
+
+    border: 1px solid rgba(255, 159, 207, 0.3);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform:
+        translateY(30px)
+        scale(0.96);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        max-height 0.8s ease,
+        padding 0.6s ease;
+}
+
+.carta-final.carta-abierta {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    max-height: 1000px;
+
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.carta-final-etiqueta {
+    color: var(--rosa);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 4px;
+}
+
+.carta-final h3 {
+    color: var(--rosa-claro);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 2rem;
+
+    margin: 15px 0 25px;
+}
+
+.carta-final-texto {
+    text-align: left;
+}
+
+.carta-final-texto p {
+    color: var(--gris);
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+.carta-final-texto strong {
+    color: var(--rosa-claro);
+}
+
+.carta-final-firma {
+    margin-top: 25px;
+
+    font-size: 2rem;
+}
+
+
+/* 📱 Celular */
+
+@media (max-width: 600px) {
+
+    .carta-final {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .carta-final.carta-abierta {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .carta-final h3 {
+        font-size: 1.5rem;
+    }
+
+}
+/* =====================================================
+   📸 FOTOS ALREDEDOR DEL BOTE
+   ===================================================== */
+
+.fotos-bote {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.foto-bote {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 159, 207, 0.35);
+    background: rgba(255, 159, 207, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    transition: 0.4s ease;
+}
+
+.foto-bote img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.foto-bote:hover {
+    transform: translateY(-7px) scale(1.02);
+    border-color: var(--rosa);
+    box-shadow: 0 20px 50px rgba(255, 105, 180, 0.18);
+}
+
+/* 📸 FOTO 5 DEBAJO */
+
+.foto-bote-5 {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+/* 📱 CELULAR */
+
+@media (max-width: 600px) {
+
+    .fotos-bote {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .foto-bote {
+        height: 250px;
+    }
+
+    .foto-bote-5 {
+        grid-column: auto;
+        max-width: 100%;
+    }
+
+}
+.foto-espacio {
+    height: 170px;
+    min-height: 170px;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.foto-espacio img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    border-radius: 22px;
+}
+.ella-texto {
+    width: 100%;
+}
+
+.bote-razones {
+    width: 100%;
+}
+.ella-texto {
+    grid-column: 1;
+}
+
+.bote-razones {
+    grid-column: 2;
+}
+.ella-texto {
+    grid-column: 1;
+}
+
+.bote-razones {
+    grid-column: 2;
+}
+/* =====================================================
+   🌸 CORRECCIÓN FINAL - SECCIÓN ELLA
+   ===================================================== */
+
+.ella-contenido {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+
+    padding: 45px;
+
+    border-radius: 30px;
+    border: 1px solid rgba(255, 159, 207, 0.3);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 159, 207, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   📸 FOTOS 3, 4 Y 5
+   ===================================================== */
+
+.ella-fotos {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 10px;
+}
+
+.foto-espacio {
+    width: 100%;
+    height: 210px;
+    min-height: 210px;
+
+    border-radius: 22px;
+    overflow: hidden;
+
+    border: 1px dashed rgba(255, 159, 207, 0.35);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 159, 207, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    transition: 0.4s ease;
+}
+
+.foto-espacio img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    border-radius: 22px;
+}
+
+.foto-espacio:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--rosa);
+
+    box-shadow:
+        0 15px 40px rgba(255, 114, 182, 0.12);
+}
+
+
+/* =====================================================
+   💗 TEXTO DE ELLA
+   ===================================================== */
+
+.ella-texto {
+    grid-column: 1;
+
+    width: 100%;
+
+    text-align: left;
+
+    position: relative;
+    z-index: 2;
+}
+
+.ella-texto h3 {
+    margin-bottom: 20px;
+
+    color: var(--rosa-claro);
+
+    font-size: 2.5rem;
+}
+
+.ella-texto p {
+    margin-bottom: 18px;
+
+    color: var(--gris);
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   🫙 BOTE DE LAS 10 RAZONES
+   ===================================================== */
+
+.bote-razones {
+    grid-column: 2;
+
+    width: 100%;
+    min-height: 500px;
+
+    margin: 0;
+
+    position: relative;
+
+    padding: 35px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255, 182, 217, 0.12),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(255, 105, 180, 0.12),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 159, 207, 0.3);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.25),
+        0 0 35px rgba(255, 105, 180, 0.08);
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+}
+
+
+/* =====================================================
+   💌 CARTA FINAL
+   ===================================================== */
+
+.carta-final {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: 10px auto 0;
+}
+
+
+/* =====================================================
+   🦭 DECORACIÓN
+   ===================================================== */
+
+.ella-decoracion {
+    position: absolute;
+
+    right: 25px;
+    bottom: 15px;
+
+    font-size: 4rem;
+
+    opacity: 0.8;
+
+    animation: focaElla 4s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   📱 TABLET
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .ella-contenido {
+        grid-template-columns: 1fr;
+
+        padding: 30px 22px;
+    }
+
+    .ella-fotos {
+        grid-column: 1;
+
+        grid-template-columns: 1fr;
+    }
+
+    .ella-texto {
+        grid-column: 1;
+
+        text-align: center;
+    }
+
+    .bote-razones {
+        grid-column: 1;
+
+        min-height: 480px;
+    }
+
+    .carta-final {
+        grid-column: 1;
+    }
+
+    .ella-decoracion {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   📱 CELULAR
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .foto-espacio {
+        height: 230px;
+        min-height: 230px;
+    }
+
+    .foto-espacio img {
+        height: 230px;
+    }
+
+    .bote-razones {
+        min-height: 480px;
+
+        padding: 30px 20px;
+    }
+
+}
+/* 🫙 MOVER EL BOTE AL LADO DEL TEXTO */
+
+.ella-texto {
+    grid-column: 1;
+}
+
+.bote-razones {
+    grid-column: 2;
+}
+/* MOVER SOLO EL BOTE AL LADO DEL TEXTO */
+
+.ella-fotos {
+    grid-column: 1 / -1;
+}
+
+.ella-texto {
+    grid-column: 1;
+}
+
+.bote-razones {
+    grid-column: 2;
+    grid-row: 2;
+}
+/* FOTOS DE SUS CUALIDADES */
+.cualidad-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+.gusto-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+.gusto-foto {
+    overflow: hidden;
+}
+
+.gusto-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 18px;
+}
+
+
+.titulo-galeria-especial {
+    display: block;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--rosa-claro);
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+/* 💗 TÍTULO DE LA GALERÍA */
+
+#galeria .titulo-galeria-especial {
+    display: block !important;
+    width: 100% !important;
+
+    color: #ffd6e9 !important;
+
+    font-size: 3.8rem !important;
+    font-weight: 800 !important;
+
+    text-align: center !important;
+
+    letter-spacing: 1px !important;
+    line-height: 1.1 !important;
+
+    margin-bottom: 22px !important;
+
+    text-shadow:
+        0 0 10px rgba(255, 159, 207, 0.5),
+        0 0 25px rgba(255, 114, 182, 0.3);
+}
+/* =========================
+   SECCIÓN VIDEOS
+========================= */
+
+#videos {
+    padding: 80px 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #1d0715,
+            #300c23
+        );
+}
+
+
+/* =========================
+   TÍTULO DE VIDEOS
+========================= */
+
+#videos .seccion-titulo {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+#videos .seccion-titulo span {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#videos .seccion-titulo h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+#videos .seccion-titulo p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   VIDEO PRINCIPAL
+========================= */
+
+.video-principal {
+    max-width: 900px;
+    margin: 0 auto 45px;
+    background: transparent;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+
+/* =========================
+   VIDEOS PEQUEÑOS
+========================= */
+
+.videos-pequenos {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.video-mini {
+    background: transparent;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.video-mini:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =========================
+   ESPACIO DEL VIDEO
+========================= */
+
+.video-placeholder {
+    position: relative;
+    width: 100%;
+    height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #ffdce8, #fceff4);
+
+    overflow: hidden;
+}
+
+.video-principal .video-placeholder {
+    height: 480px;
+}
+
+
+/* =========================
+   INPUT PARA SELECCIONAR VIDEO
+========================= */
+
+.selector-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   CONTENIDO DEL VIDEO
+========================= */
+
+.contenido-video {
+    text-align: center;
+    pointer-events: none;
+}
+
+.icono-video {
+    display: block;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.contenido-video p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   INFORMACIÓN DEL VIDEO
+========================= */
+
+.video-info {
+    padding: 25px;
+    text-align: center;
+    background: transparent;
+}
+
+.video-info h3 {
+    margin: 0 0 12px;
+    font-size: 23px;
+}
+
+.video-info p {
+    margin: 0 auto 18px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+
+/* =========================
+   BOTÓN VER MÁS
+========================= */
+
+.boton-video-mensaje {
+    border: none;
+    padding: 11px 22px;
+
+    border-radius: 25px;
+
+    background: #f7b6ca;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.boton-video-mensaje:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+
+
+/* =========================
+   CARTAS DE LOS VIDEOS
+========================= */
+
+.mensaje-video {
+    display: none;
+
+    margin-top: 20px;
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 105, 180, 0.10);
+    border: 1px solid rgba(255, 182, 217, 0.30);
+
+    color: var(--blanco);
+    line-height: 1.7;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+    animation: aparecerCartaVideo 0.4s ease;
+}
+
+.mensaje-video.mostrar {
+    display: block;
+}
+
+@keyframes aparecerCartaVideo {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+
+/* =========================
+   LO QUE VEO EN ELLA
+========================= */
+
+.lo-que-veo {
+    max-width: 1000px;
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.lo-que-veo > span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.lo-que-veo h3 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.lo-que-veo > p {
+    max-width: 650px;
+    margin: 0 auto 35px;
+
+    line-height: 1.7;
+}
+
+
+/* TARJETAS */
+
+.veo-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.veo-tarjeta {
+    background: transparent;
+
+    padding: 25px 18px;
+
+    border-radius: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.veo-tarjeta:hover {
+    transform: translateY(-6px);
+}
+
+.veo-tarjeta span {
+    font-size: 30px;
+}
+
+.veo-tarjeta h4 {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.veo-tarjeta p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FRASE FINAL
+========================= */
+
+.frase-final-videos {
+    max-width: 800px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    padding: 45px 30px;
+
+    background: transparent;
+
+    border-radius: 25px;
+}
+
+.frase-final-videos > span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.frase-final-videos p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BOTÓN OTRA FRASE
+========================= */
+
+#botonFraseVideo {
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    background: #f7b6ca;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+#botonFraseVideo:hover {
+    transform: scale(1.05);
+}
+
+
+#fraseCambianteVideo {
+    display: none;
+
+    margin-top: 25px;
+    padding: 25px;
+
+    background: rgba(255, 105, 180, 0.10);
+    border: 2px solid #ff69b4;
+    border-radius: 20px;
+
+    line-height: 1.7;
+    text-align: center;
+
+    animation: abrirCartaVideo 0.5s ease;
+}
+
+#fraseCambianteVideo.abierta {
+    display: block;
+}
+
+@keyframes abrirCartaVideo {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 800px) {
+
+    .videos-pequenos {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .video-principal .video-placeholder {
+        height: 300px;
+    }
+
+    .veo-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    #videos {
+        padding: 60px 15px;
+    }
+
+    #videos .seccion-titulo h2 {
+        font-size: 30px;
+    }
+
+    .video-principal .video-placeholder {
+        height: 250px;
+    }
+
+    .veo-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   AJUSTE DE VIDEOS
+========================= */
+
+.video-placeholder {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1d0715;
+}
+
+.video-placeholder video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Video principal */
+
+.video-principal .video-placeholder {
+    height: 450px;
+}
+
+/* Videos pequeños */
+
+.video-mini .video-placeholder {
+    height: 250px;
+}
+
+/* Controles del video */
+
+.video-placeholder video::-webkit-media-controls {
+    display: flex;
+}
+
+
+.foca-besitos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.foca {
+    font-size: 70px;
+}
+
+.besito {
+    font-size: 28px;
+    animation: lanzarBesito 1.5s infinite;
+}
+
+.besito:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.besito:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes lanzarBesito {
+    0% {
+        opacity: 0;
+        transform: translateX(0) scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(15px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(35px) scale(0.7);
+    }
+}
+
+/* =========================
+   BORDE DE CADA TARJETA
+========================= */
+
+.veo-tarjeta {
+    border: 2px solid #ff69b4;
+    border-radius: 18px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+#videos .veo-tarjetas .veo-tarjeta {
+    border: 3px solid #ff69b4 !important;
+    border-radius: 18px !important;
+    padding: 20px !important;
+    box-sizing: border-box;
+}
+
+
+
+/* =========================
+   CARTA RESUMEN DE VIDEOS
+========================= */
+
+.carta-resumen-video {
+    display: none;
+
+    margin-top: 25px;
+    padding: 25px;
+
+    background: rgba(255, 105, 180, 0.10);
+    border: 2px solid #ff69b4;
+    border-radius: 20px;
+
+    line-height: 1.7;
+    text-align: center;
+
+    animation: abrirCartaVideo 0.5s ease;
+}
+
+.carta-resumen-video.abierta {
+    display: block;
+}
+
+@keyframes abrirCartaVideo {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+/* =========================
+   MENSAJE FINAL
+========================= */
+
+.mensaje-contenedor {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    justify-items: center;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+/* CARTA COMPLETA ARRIBA */
+
+.mensaje-contenedor .carta {
+
+    grid-column: 1 / 3;
+
+    width: 100%;
+
+}
+
+
+/* =========================
+   UBICACIÓN DE LAS FOTOS
+========================= */
+
+.fotos-mensaje {
+
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 60px;
+
+    margin: 40px auto 0;
+
+}
+
+
+/* =========================
+   CADA FOTO Y SU BOTÓN
+========================= */
+
+.foto-mensaje-item {
+
+    width: 300px;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   IMÁGENES
+========================= */
+
+.foto-mensaje-item .mensaje-foto {
+
+    width: 300px;
+
+    height: 360px;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    border: 2px solid #ff69b4;
+
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.25);
+
+}
+
+
+.foto-mensaje-item .mensaje-foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+/* =========================
+   CARTAS DE LAS FOTOS
+========================= */
+
+.carta-foto {
+    display: none;
+}
+
+.carta-foto.abierta {
+    display: block;
+}
+
+/* =========================
+   BOTÓN ABRIR CARTA
+========================= */
+
+.boton-carta-foto {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ff69b4;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+/* =========================
+   🔐 PANTALLA DE CONTRASEÑA
+========================= */
+
+.pantalla-password {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd6e7, #fff0f6, #f8c8dc);
+    padding: 20px;
+}
+
+.password-caja {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(150, 50, 90, 0.25);
+}
+
+.password-foca {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.password-caja h2 {
+    margin: 10px 0;
+    color: #b03a68;
+    font-size: 28px;
+}
+
+.password-caja p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+#passwordInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 18px;
+    border: 2px solid #f0b6cd;
+    border-radius: 15px;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#passwordInput:focus {
+    border-color: #c85a83;
+}
+
+#botonPassword {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 15px;
+    background: #c85a83;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botonPassword:hover {
+    transform: translateY(-2px);
+}
+
+#mensajePassword {
+    min-height: 20px;
+    margin-top: 15px;
+    color: #c03968;
+    font-weight: bold;
+}
