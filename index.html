@@ -1225,13 +1225,11 @@ tiene un lugar bonito en mi corazón.
 
     <script src="script.js"></script>
 
- <!-- REPRODUCTOR DE MÚSICA FLOTANTE FIJO -->
-<div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background: rgba(255, 192, 203, 0.9); padding: 10px; border-radius: 50px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
-  <audio controls style="height: 40px;">
-    <source src="media/audio/stray.mp3" type="audio/mpeg">
-    Tu navegador no soporta el elemento de audio.
-  </audio>
-</div>
+ <!-- REPRODUCTOR DE MÚSICA CONFIGURADO -->
+<audio id="musicaFondo" autoplay loop controls style="display: none;">
+  <source src="media/audio/stray.mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
 </body>
 
 

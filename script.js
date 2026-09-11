@@ -650,10 +650,18 @@ botonPassword.addEventListener("click", function () {
 
 });
 
-passwordInput.addEventListener("keydown", function (evento) {
-
+asswordInput.addEventListener("keydown", function (evento) {
     if (evento.key === "Enter") {
         botonPassword.click();
     }
-
 });
+
+// Forzar la reproducción automática cuando haga clic en cualquier parte de la página (o al presionar Entrar)
+document.addEventListener('click', function() {
+    var audio = document.getElementById('musicaFondo');
+    if (audio && audio.paused) {
+        audio.play().catch(function(error) {
+            console.log("El navegador requiere una interacción previa para sonar:", error);
+        });
+    }
+}, { once: true }); // El 'once: true' hace que solo se ejecute con el primer clic y luego se desactive
